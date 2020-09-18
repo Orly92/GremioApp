@@ -1,0 +1,70 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+        Usuario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-grid>
+
+  <h1 class="ion-text-center">Gremio</h1>
+
+  <ion-card model="ios" class="margin-top">
+   
+    <ion-card-content >
+
+      <form #formulario="ngForm" (ngSubmit)="onsubmit()">
+
+        <ion-list>
+     
+          <h2 class="ion-margin-top">Usuario</h2>
+          <ion-item>
+            <ion-label position="floating">usuario</ion-label>
+              <ion-input  type="email"
+                           name="email"
+                        required></ion-input>
+          </ion-item>
+
+
+          <h2 class="margin-top" >Contraseña</h2>
+          <ion-item >
+            <ion-label position="floating">contraseña</ion-label>
+              <ion-input type="password"
+                         name="password"
+                         required></ion-input>
+          </ion-item>
+             
+        </ion-list>
+     
+        
+        <ion-button 
+                   expand="full"
+                   class="margin-top"
+                   type="submit"
+                   [disabled]="formulario.invalid"
+                   routerLink='/solicitudes'>
+                   
+                   Iniciar seccion
+                  </ion-button>
+
+          
+
+        <ion-row class="margin-top">
+          <ion-col>
+            <a href="#" class="card-link">¿No tiene una cuenta?</a>
+          </ion-col>
+          <ion-col>
+            <a href="#" class="card-link">Restablecer contraseña</a>
+          </ion-col>
+        </ion-row>
+         
+      </form>
+      
+      
+    </ion-card-content>
+  
+  </ion-card>
+</ion-grid>
+</ion-content>
